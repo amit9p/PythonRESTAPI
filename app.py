@@ -7,14 +7,10 @@ app = Flask(__name__)
 def hello():
     return "Hello World!"
 
-@app.route("/1")
-def hello1():
-    return "Hello World 1 !"
+@app.route("/ping")
+def pinging():
+    return "Pinged Successfully !"
 
-
-@app.route("/2")
-def hello2():
-    return "Hello World 2!"
 
 @app.route('/msg/<msg>')
 def display_msg(msg):
